@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.pngtree.com%2Ffree-backgrounds-photos%2Fluar-angkasa&psig=AOvVaw17l3dze8PV_-DX9HCBGoHn&ust=1707424256003000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPj_15WJmoQDFQAAAAAdAAAAABAD);
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: #041118;
+}
+
+p {
+    font-size: 1rem; /* 1rem = 16px */
+    line-height: 2rem;
+}
+
+p, span, label, input, textarea, li {
+    color: rgba(25, 8, 8, 0.84);
+}
+
+a { 
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 90%;
+    }
+}
+
+/* BURGER */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(41, 48, 57);
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger:hover {
+    background-color: rgb(169, 169, 170);
+    transition: 0.2s ease-in-out;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* TOMBOL */
+.btn {
+    padding: 1rem 1rem;
+    background: white;
+    border: 1px solid rgb(239, 239, 239);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgb(10, 63, 222) 0px 3px 4px;
+}
+
+/* TITLES */
+
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: rgb(12, 6, 114);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: chocolate;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* LAYOUT */
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+
+
+/* LOGO DAN MENU */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: rgb(49, 41, 41);
+}
+
+.logo a:hover {
+    color: rgb(241, 3, 3);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #1a1b20;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 254);
+}
+
+/* FOTO SAYA */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem ;
+}
+
+.hero-name span {
+    color: rgb(0, 0, 255);
+}
+
+.hero-right img {
+    width: 80%;
+    top: 50%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* SECTION SERVICE */
+#services {
+    background-color: rgb(243, 246, 246);
+    padding: 6rem 0;
+}
+
+.services .pre-title {
+    margin: 0 auto;
+    text-align: center;
+    color: crimson;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.service{
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: rgb(108, 194, 234);
+    border-radius: 50px;
+}
+
+.service h4 {
+    margin: 2rem 0;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.service-icon {
+    background-color: rgb(165, 196, 212);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.service-icon svg {
+    fill: indigo;   
+}
+
+/* PORTFOLIO SECTION */
+#portfolios {
+    padding: 6rem 0;
+}
+
+.portfolio {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.portfolio-cover {
+    height: 300px;
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 2rem 1rem;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio h4 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.portfolio-title a svg:hover {
+    fill: rgb(0, 0, 254);
+}
+
+.portfolio-title a svg {
+    transition:  ease-in-out;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portfolio-tags div {
+    font-size: 1rem;
+    border: 1px solid blue;
+    padding: 0.5rem 1rem;
+    color: rgb(41, 24, 110);
+}
+
+/* SKILLS */
+#skills {
+    padding: 6rem 0;
+    background-color: rgb(212, 212, 211);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.belajar {
+    display: flex;
+    gap: 2rem;
+}
+
+.belajar .line {
+    padding: 0 1rem;
+}
+
+.belajar .line div {
+    width: 2px;
+    height: 100%;
+    background-color: rgb(138, 138, 138);
+    position: relative;
+}
+
+.belajar-info p {
+    margin: 1rem 0 1rem;
+}
+
+.belajar-tahun {
+    margin-bottom: 3rem;
+}
+
+/* THE DOT ON THE LINE */
+.belajar .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: rgb(138, 138, 138);
+    border-radius: 50px;
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
+.skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* CONTACT SECTION */
+#contact {
+    padding: 6rem 0;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 0.6rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem 1.3rem;
+    font-family: sans-serif;
+    background-color: rgb(233, 237, 233);
+    border: 1px solid rgb(17, 6, 118);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: rgb(76, 82, 104);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: rgb(113, 151, 233);
+    color: rgb(254, 241, 241);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: rgb(0, 0, 173);
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item-icon {
+    background-color: rgb(201, 230, 240);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: rgb(11, 72, 241);
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 4rem 0;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+}
